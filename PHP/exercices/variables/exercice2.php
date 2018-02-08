@@ -7,6 +7,8 @@
 * 
 * Nombre d'élement : 6
 * Deuxieme element : 2
+* 
+* http://php.net/manual/fr/ref.array.php
 */
 
 
