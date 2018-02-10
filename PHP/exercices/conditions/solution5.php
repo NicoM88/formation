@@ -22,3 +22,7 @@ if(!isset($num)) {
 * Completez le code ici
 */
 
+switch($num % 2 == 0) {
+    case true: echo "$num est pair";break;
+    case false: echo "$num est impair";break;
+}

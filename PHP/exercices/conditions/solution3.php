@@ -18,3 +18,9 @@ if(is_null($nombre)) {
 * L'operateur modulo "%" permet de connaitre le reste d'une division
 */
 
+
+if($nombre % 2 == 0 ) {
+    echo "$nombre est pair";
+} else {
+    echo "$nombre est impair";
+}

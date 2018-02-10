@@ -19,3 +19,11 @@ if(!isset($chaine)) {
 * Completez le code ici
 */
 
+$taille = strlen($chaine);
+if($taille < 10) {
+    echo "la taille de la chaine est inferieur a 10 caracteres";
+} elseif ($taille > 10) {
+    echo "la taille de la chaine est superieur a 10 caracteres";
+} else {
+    echo "la taille de la chaine est egale a 10 caracteres";
+}

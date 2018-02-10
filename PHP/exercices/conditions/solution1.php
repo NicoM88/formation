@@ -15,3 +15,10 @@ if(!isset($num1) || !isset($num2)) {
 * Completez le code ici
 */
 
+if($num1 <= $num2) {
+    echo "$num est inferieur ou égal a $num2";
+} elseif ($num1 > $num2) {
+    echo "$num est superieur a $num2";
+} else {
+    echo "$num est égal a $num2";
+}
