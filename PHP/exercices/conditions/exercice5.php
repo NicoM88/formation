@@ -11,9 +11,8 @@
 *   Rappel: l'operateur permettant de connaitre le reste d'une division est %
 */
 $num = $_GET['num'];
-
 if(!isset($num)) {
-	die("Vous devez appeler le script de cette facon : <br /><br /><strong>http://localhost:8080/exercices/conditions/exercice_5.php?num=4</strong>");
+	die("Vous devez appeler le script de cette facon : <br /><br /><strong>http://localhost/formation/PHP/exercices/conditions/exercice5.php?num=4</strong>");
 }
 
 
@@ -22,3 +21,8 @@ if(!isset($num)) {
 /*
 * Completez le code ici
 */
+
+switch($num % 2 == 0) {
+    case true: echo "$num est pair";break;
+    case false: echo "$num est impair";break;
+}

@@ -9,7 +9,7 @@
 */
 $nombre = $_GET['nombre'];
 if(is_null($nombre)) {
-	die("Vous devez appeler le script de cette facon : <br /><br /><strong>http://localhost:8080/php/conditions/exercice_3.php?nombre=100</strong>");
+	die("Vous devez appeler le script de cette facon : <br /><br /><strong>http://localhost/formation/PHP/exercices/conditions/exercice3.php?nombre=4</strong>");
 }
 /*
 * Completez le code ici
@@ -18,3 +18,9 @@ if(is_null($nombre)) {
 * L'operateur modulo "%" permet de connaitre le reste d'une division
 */
 
+
+if($nombre % 2 == 0 ) {
+    echo "$nombre est pair";
+} else {
+    echo "$nombre est impair";
+}

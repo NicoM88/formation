@@ -10,13 +10,20 @@
 *
 */
 $chaine = $_GET['chaine'];
-if(is_null($chaine)) {
-	die("Vous devez appeler le script de cette facon : <br /><br /><strong>http://localhost:8080/php/conditions/exercice_2.php?chaine=ceci est un test</strong>");
+
+if(!isset($chaine)) {
+	die("Vous devez appeler le script de cette facon : <br /><br /><strong>http://localhost/formation/PHP/exercices/conditions/exercice2.php?chaine=ceci est un test</strong>");
 }
+
 /*
 * Completez le code ici
-*
-* AIDE :
-* La fonction permettant de connaitre le nombre de caractère d'une chaine est strlen()
-* http://fr.php.net/strlen
 */
+
+$taille = strlen($chaine);
+if($taille < 10) {
+    echo "la taille de la chaine est inferieur a 10 caracteres";
+} elseif ($taille > 10) {
+    echo "la taille de la chaine est superieur a 10 caracteres";
+} else {
+    echo "la taille de la chaine est egale a 10 caracteres";
+}
