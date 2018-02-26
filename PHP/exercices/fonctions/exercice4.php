@@ -6,3 +6,14 @@
 */
 
 
+function varExists($var) {
+    if(isset($_POST[$var])) {
+        return true;
+    }elseif(isset($_SESSION[$var])) {
+        return true;
+    }elseif(isset($_GET[$var])) {
+        return true;
+    } else {
+        return false;
+    }
+}
