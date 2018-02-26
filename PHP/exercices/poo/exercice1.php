@@ -19,5 +19,5 @@
 * 
 * 
 * Créer ensuite 3 chats et 2 chiens, les mettres dans un tableau
-* Parcourir le tableau et afficher soit le crie, la vitesse ou son temps de sieste.
+* Parcourir le tableau et afficher soit le cri, la vitesse ou son temps de sieste.
 */
