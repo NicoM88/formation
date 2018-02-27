@@ -14,11 +14,17 @@
 function posString($chaine,$boutdechaine) {
         
     $result=false;
+    // On parcourt la variablechaine
     for($i=0;$i<strlen($chaine) - 1;$i++) {        
+        // On parcout le bout dechaine
         for($j=0;$j<strlen($boutdechaine) - 1;$j++) {
+            // Si le caractere $i+$j existe dans chaine
             if(isset($chaine[$i + $j])) {
-                if($chaine[$i + $j] == $boutdechaine[$j]) {                
+                // Si le caractere $i + $j de chaine est egal au caractere $j de chaine
+                if($chaine[$i + $j] == $boutdechaine[$j]) {  
+                    // Si on a pas la position du premier caractere de boutdechaine
                     if($result == false) {
+                        // On enregistre la position du premier caractere de boutdechaine
                         $result = $i;                
                     }
                 }
@@ -26,7 +32,7 @@ function posString($chaine,$boutdechaine) {
         }
         
     }
-    
+    // On retourne la position
     return $result;    
 }
 
