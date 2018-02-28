@@ -47,7 +47,7 @@ Tableau des points par lettre:
     - cette classe implemente DataSource
 - joueur (information sur le joueur)
 - partie (information sur les parties)
-- scrabble (permet de verifier les mots)
+- scrabble (permet de verifier les mots et derouler le jeu)
 
 
 
