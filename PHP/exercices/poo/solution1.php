@@ -1,5 +1,6 @@
 <?php
-
+$var="bonjour";
+var_dump($var);die;
 // Creation de l'interface
 interface Animal {
     public function getCry();
