@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Diapo 15</title>
+</head>
+<body>
+<center>
+<a href="text0.html">Première page</a> <a href="text13.html">Précédent</a> <a href="text15.html">Suivant</a> <a href="text28.html">Dernière page</a> <a href="formation.html">Résumé</a> <a href="img14.html">Images</a></center><br>
+<h1>PHP – Les boucles - FOR</h1>
+<table>
+  <tr>
+    <td>
+<ul>
+<li>for(initialisation&nbsp;; condition&nbsp;; modification de la variable) {</li>
+<li>         code a exécuter</li>
+<li>}</li>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+  </tr>
+</table>
+<p>Une boucle <b>FOR</b> permet d’itérer c’est à dire jouer plusieurs fois une portion de code.</p>
+<p>D’abord on initialise une variable qui permettra de stopper la boucle une fois la condition vérifiée</p>
+<p>Ensuite on incrémente la variable (ou on la décrémente)&nbsp;.</p>
+<table>
+  <tr>
+    <td>
+<ul>
+<li>// affiche les nombres de 0 a 10</li>
+<li>for($i=0; $i&lt;=10; $i++) {</li>
+<ul>
+<li>echo $i.&nbsp;‘\n’&nbsp;;</li>
+</ul>
+<li>}</li>
+</ul>
+    </td>
+    <td>
+<ul>
+<li>// affiche les nombres de 10 a 0</li>
+<li>for($i=10; $i&gt;=10; $i--) {</li>
+<ul>
+<li>echo $i.&nbsp;‘\n’&nbsp;;</li>
+</ul>
+<li>}</li>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<ul>
+<li>// Affiche les nombres de 0 a 20 </li>
+<li>// 5 par 5</li>
+<li>for($i=0; $i&lt;=20; $i+=5) {</li>
+<ul>
+<li>echo $i.&nbsp;‘\n’&nbsp;;</li>
+</ul>
+<li>}</li>
+</ul>
+    </td>
+    <td>
+<ul>
+<li>// Affiche les nombres de 20 a 0 </li>
+<li>// 5 par 5</li>
+<li>for($i=20; $i&gt;=0; $i-=5) {</li>
+<ul>
+<li>echo $i.&nbsp;‘\n’&nbsp;;</li>
+</ul>
+<li>}</li>
+</ul>
+    </td>
+  </tr>
+</table>
+<p>Infos&nbsp;: http://php.net/manual/fr/control-structures.for.php</p>
+</body>
+</html>

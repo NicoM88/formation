@@ -1,0 +1,23 @@
+<?php
+
+function countString($string) {
+    // on definit les variables
+    $run = true;
+    $i=0; // Nombre de caractere
+    // Tant que run est a true on execute la boucle
+    while($run == true) {
+        // Si il n'y a pas de caractere a l'index $i de $string on 
+        // set $run a false pour arreter la boucle
+        if(!isset($string[$i])) {
+            $run = false;
+        // Sinon on incremente le nombre de caractere
+        } else {
+            $i++;    
+        }
+        
+    }
+    // On retourne le nombre de caractere
+    return $i;
+}
+
+echo countString("hello world"); // 11

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Diapo 22</title>
+</head>
+<body>
+<center>
+<a href="text0.html">Première page</a> <a href="text20.html">Précédent</a> <a href="text22.html">Suivant</a> <a href="text28.html">Dernière page</a> <a href="formation.html">Résumé</a> <a href="img21.html">Images</a></center><br>
+<h1>PHP – Fonctions – porté des variables</h1>
+<ul>
+<li>A l’intérieur d’une fonction les variables sont dites «&nbsp;locales&nbsp;» c’est à dire qu’elles ne sont pas accessible à l’extérieur de la fonction.</li>
+<li>Les variables du programme principal sont «&nbsp;globales&nbsp;» c’est a dire accessible dans tout le programme SAUF dans les fonctions et méthodes de classe.</li>
+</ul>
+<table>
+  <tr>
+    <td>
+<p>&lt;?php</p>
+<p>$a = ‘bonjour nicolas’</p>
+<p>function maFonction($parametre) {</p>
+<p>          $a = ‘Aurevoir Nicolas’&nbsp;;</p>
+<p>          $phrase = $parametre . ‘ ‘ . $a&nbsp;;</p>
+<p>          return $phrase&nbsp;;</p>
+<p>}</p>
+<p>echo $a&nbsp;; // Affiche ‘Bonjour nicolas’</p>
+<p>echo maFonction(‘test&nbsp;‘)&nbsp;; //Affiche ‘Aurevoir Nicolas test’ </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

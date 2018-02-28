@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Diapo 26</title>
+</head>
+<body>
+<center>
+<a href="text0.html">Première page</a> <a href="text24.html">Précédent</a> <a href="text26.html">Suivant</a> <a href="text28.html">Dernière page</a> <a href="formation.html">Résumé</a> <a href="img25.html">Images</a></center><br>
+<h1>PHP – POO - Héritage</h1>
+<ul>
+<li>Une classe peut étendre, c’est à dire hériter des méthodes (fonctions) et propriétés (variables) d’une autre classe. Cela se fait grace au mot clef <b>EXTENDS</b></li>
+<li>Lorsqu’une classe hérite d’une autre classe elle inclue ses propriétés et méthodes. Une classe ne peut hérité que d’UNE autre classe.</li>
+</ul>
+<table>
+  <tr>
+    <td>
+<p>&lt;?php</p>
+<p>Class Human() {</p>
+<p>  </p>
+<p>          public $nom&nbsp;= ‘Blaudez’;</p>
+<p>          private $adresse;</p>
+<p>          </p>
+<p>         public function setNom($nom) {</p>
+<p>                $this→nom = $nom&nbsp;;</p>
+<p>         }</p>
+<p>         </p>
+<p>        public function getNom() {</p>
+<p>               return $this→nom&nbsp;;</p>
+<p>        } </p>
+<p>}</p>
+    </td>
+    <td>
+<p>&lt;?php</p>
+<p>Class Male <b>extends</b> Human {</p>
+<p>         protected $age&nbsp;= 35;</p>
+<p>         public function getAge() {</p>
+<p>               Return $this→age&nbsp;;</p>
+<p>         }</p>
+<p>}</p>
+<p>$obj= new Male()&nbsp;;</p>
+<p>echo $obj→getAge()&nbsp;; // affiche ‘35’</p>
+<p>// getNom() est un  méthode héritée de la classe // Human</p>
+<p>echo $obj→getNom()&nbsp;; // affiche ‘Blaudez’ </p>
+<p>echo $obj→adresse&nbsp;; // ERROR - (private)</p>
+    </td>
+  </tr>
+</table>
+<p>Infos&nbsp;: http://php.net/manual/fr/language.oop5.inheritance.php</p>
+</body>
+</html>

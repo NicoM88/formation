@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Diapo 28</title>
+</head>
+<body>
+<center>
+<a href="text0.html">Première page</a> <a href="text26.html">Précédent</a> <a href="text28.html">Suivant</a> <a href="text28.html">Dernière page</a> <a href="formation.html">Résumé</a> <a href="img27.html">Images</a></center><br>
+<h1>PHP – POO - Interface</h1>
+<ul>
+<li>Une interface impose des méthodes aux classes qui l’implémentent</li>
+<li>Si ces méthodes ne sont pas définies dans la classe alors PHP émet une erreur et le script s’arrête,</li>
+<li><b></b></li>
+<li><b></b></li>
+</ul>
+<table>
+  <tr>
+    <td>
+<p>Interface Human {</p>
+<p>     public function getAge()&nbsp;;</p>
+<p>}</p>
+<p>// Cette classe n’est pas valide car elle ne definie pas la methode getAge()</p>
+<p>// alors qu’elle implemente l’interface Human</p>
+<p>Class Male <b>implements</b> Human {</p>
+<p>   public function getName() {</p>
+<p>   }</p>
+<p>}</p>
+<p>// Cette classe est valide car elle definie la méthode getAge()&nbsp;;</p>
+<p>Class Female <b>implements</b> Human {</p>
+<p>   protected $age=’35’&nbsp;;</p>
+<p>   public function getAge() {  </p>
+<p>       Return $this→age&nbsp;;</p>
+<p>   }</p>
+<p>}</p>
+    </td>
+  </tr>
+</table>
+<p>Infos&nbsp;: http://php.net/manual/fr/language.oop5.interfaces.php</p>
+</body>
+</html>

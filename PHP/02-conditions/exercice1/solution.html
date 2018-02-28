@@ -1,0 +1,12 @@
+<?php
+
+$num1 = $_GET['num1'];
+$num2 = $_GET['num2'];
+
+if($num1 <= $num2) {
+    echo "$num est inferieur ou égal a $num2";
+} elseif ($num1 > $num2) {
+    echo "$num est superieur a $num2";
+} else {
+    echo "$num est égal a $num2";
+}

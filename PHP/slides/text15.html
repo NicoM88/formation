@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Diapo 16</title>
+</head>
+<body>
+<center>
+<a href="text0.html">Première page</a> <a href="text14.html">Précédent</a> <a href="text16.html">Suivant</a> <a href="text28.html">Dernière page</a> <a href="formation.html">Résumé</a> <a href="img15.html">Images</a></center><br>
+<h1>PHP – Les boucles - FOREACH</h1>
+<ul>
+<li>Permet de parcourir un tableau. </li>
+<li>Dans l’exemple ci-dessous la clef est passé dans la variable $key et le contenu de l’élément dans $value.</li>
+</ul>
+<table>
+  <tr>
+    <td>
+<ul>
+<li>// Avec un tableau indéxé</li>
+<li>$array = [‘paris’,’london’,’madrid’]&nbsp;;</li>
+<li>foreach($array as $key=&gt;$value) {</li>
+<ul>
+<li>echo $key.&nbsp;‘=’. $value.&nbsp;‘\n’&nbsp;;</li>
+</ul>
+<li>}</li>
+<li>// Affiche&nbsp;:</li>
+<li>// 0 = paris</li>
+<li>// 1 = london</li>
+<li>// 2 = madrid</li>
+</ul>
+    </td>
+    <td>
+<ul>
+<li>// Avec un tableau associatif</li>
+<li>$array =  [</li>
+<li>          ‘pays’=&gt;’france’,</li>
+<li>          ’capitale’=&gt;’paris</li>
+<li>]&nbsp;;</li>
+<li>foreach($array as $key=&gt;$value) {</li>
+<ul>
+<li>echo $key.&nbsp;‘=’. $value.&nbsp;‘\n’&nbsp;;</li>
+</ul>
+<li>}</li>
+<li>// Affiche&nbsp;:</li>
+<li>// ‘pays’ = ‘france’</li>
+<li>// ‘capitale’ = ‘paris’</li>
+</ul>
+    </td>
+  </tr>
+</table>
+<p>Infos&nbsp;: http://php.net/manual/fr/control-structures.foreach.php</p>
+</body>
+</html>

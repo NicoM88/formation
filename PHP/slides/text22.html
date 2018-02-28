@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Diapo 23</title>
+</head>
+<body>
+<center>
+<a href="text0.html">Première page</a> <a href="text21.html">Précédent</a> <a href="text23.html">Suivant</a> <a href="text28.html">Dernière page</a> <a href="formation.html">Résumé</a> <a href="img22.html">Images</a></center><br>
+<h1>PHP – Fonctions - Référence</h1>
+<ul>
+<li>La référence (&amp;) permet de changer la valeur d’un paramètre dans l’ensemble du script. Elle se place devant la variable dans la liste des paramètres.</li>
+</ul>
+<table>
+  <tr>
+    <td>
+<ul>
+<li>function test(<b>&amp;</b>$a, $b =5) {</li>
+<ul>
+<li>$a = $a + 10&nbsp;;</li>
+<li>return $a+$b&nbsp;;</li>
+</ul>
+<li>}</li>
+<li>echo test(4)&nbsp;; // affiche 19</li>
+<li>echo $a&nbsp;; // affiche 14 car $a est passé par référence et à été                            // modifié dans la fonction</li>
+</ul>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

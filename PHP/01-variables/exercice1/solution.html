@@ -1,0 +1,36 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="Solution exercice 10">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <style>
+            label {width:150px;}
+        </style>
+    </head>
+    <body>
+        <form action="exercice.php" method="post">
+            <label>Nom:</label>
+            <input type="text" name="nom" />
+            <br />
+            <label>Mot de passe:</label>
+            <input type="password" name="password" />
+            <br />
+            <input type="submit" name="action" value="valider" />            
+        </form>
+        <?php 
+        echo "<h1>Resultat</h1>";
+        if(isset($_POST['action'])) {
+            echo "Nom :".$_POST['nom']."<br />";
+            echo "Mot de passe :".$_POST['password']."<br />";
+            echo "Adresse ip :".$_SERVER['REMOTE_ADDR']."<br />";
+        }
+        ?>
+    </body>
+</html>    

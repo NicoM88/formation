@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Diapo 8</title>
+</head>
+<body>
+<center>
+<a href="text0.html">Première page</a> <a href="text6.html">Précédent</a> <a href="text8.html">Suivant</a> <a href="text28.html">Dernière page</a> <a href="formation.html">Résumé</a> <a href="img7.html">Images</a></center><br>
+<h1>PHP – Les variables – Tableau multidimensionnel</h1>
+<table>
+  <tr>
+    <td>
+<p>$eleves = [</p>
+<p>                     [‘prenom’=&gt;’prenom1’,’nom’=&gt;’nom1’],</p>
+<p>                     [‘prenom’=&gt;’prenom2’,’nom’=&gt;’nom2’]</p>
+<p>                ]&nbsp;;</p>
+<p>echo $eleves[0][‘prenom’]&nbsp;; // prenom1</p>
+<p>echo $eleves[1][‘nom’]&nbsp;; // nom2</p>
+<p>$pays = [ ‘france’=&gt; [‘capitale’=&gt;’Paris’,’population’=&gt;’60M’],</p>
+<p>                 ‘allemagne’ =&gt;  [‘capitale’=&gt;’berlin’,’population’=&gt;’80M’]</p>
+<p>                ]&nbsp;;</p>
+<p>echo $pays[‘france’][‘capitale’]&nbsp;; // Paris</p>
+<p>echo $pays[‘allemagne’][‘population’]&nbsp;; // 80M</p>
+    </td>
+  </tr>
+</table>
+<p>Un tableau multidimensionel est un tableau composé d’autres tableaux</p>
+</body>
+</html>
