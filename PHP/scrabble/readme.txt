@@ -3,12 +3,12 @@ Un dictionnaire au format texte vous permettra de verifier que le mot existe, no
 que les mots de ce fichier (tans pis pour les autres).
 
 - Créer un formulaire demandant le nombre de joueur et afficher un bouton "suivant"
-- Une fois le boutton "suivant" renseigné, demander le nom des joueurs.
+- Une fois le boutton "suivant" cliqué, demander le nom des joueurs.
 - Il faut que le nom des joueurs soit sauvegarder en session pour pouvoir les reutiliser après.
 - Créer un bouton "Commencer le jeu"
 
 
-- Une fois le boutton commencer le jeu valider créer une interface de scrabble :
+- Une fois le boutton "commencer le jeu" validé créer une interface de scrabble :
 - Créer un bouton: "Tirer des lettres" qui tire 8 lettres au hazard dans l'alphabet
 - Afficher ces lettres sur la page HTML.
 - Créer un champs texte dans lequel vous allez entrer le mot et un bouton "jouer"
