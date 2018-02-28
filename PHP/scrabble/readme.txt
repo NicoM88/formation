@@ -24,7 +24,10 @@ et afficher le nombre de point que le joueur vient de remporter ou un message s'
   * Classer les joueurs du premier au dernier.
 
 
-- Enregistrer les scores, les noms de joueurs et la date dans un fichier texte au format CSV.
+- Enregistrer l'identifiant unique d'une partie, les scores, les noms de joueurs et la date dans un fichier texte au format CSV.
+ex :
+    124785478, "01/03/2018 09:30:00", "Martin", "245"
+    124785478, "01/03/2018 09:30:00", "Lea", "127"
 
 * Aide :
 Tableau des points par lettre:
@@ -35,10 +38,10 @@ Tableau des points par lettre:
 * Créer les interfaces
 
 - Datasource :
-    - dataSourceOpen();  // Ouvre une source de donnée
-    - dataSourceWrite(); // Ecrit une ligne dans la source de donnée
-    - dataSourceRead();  // Récupere les informations de la source de donnée
-    - dataSourceClose();
+    - open();  // Ouvre une source de donnée
+    - write(); // Ecrit une ligne dans la source de donnée
+    - read();  // Récupere les informations de la source de donnée
+    - close();
     
 
 * Créer les classes
@@ -50,4 +53,8 @@ Tableau des points par lettre:
 - scrabble (permet de verifier les mots et derouler le jeu)
 
 
-
+Consignes :
+Vous devez créer un fichier PHP par classe. (http://fr.php.net/manual/fr/function.include.php)
+Il doit y avoir le minimum de PHP dans vos fichiers HTML
+Vous devrez créer une feuille de style à part
+Il doit y avoir un fichier HTML par wireframe
