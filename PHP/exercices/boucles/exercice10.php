@@ -16,3 +16,4 @@ et nombre total de points marqués
 
 * Aide :
 Utiliser les sessions : http://php.net/manual/fr/reserved.variables.session.php
+*/
