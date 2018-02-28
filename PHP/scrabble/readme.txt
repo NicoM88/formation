@@ -23,13 +23,31 @@ et afficher le nombre de point que le joueur vient de remporter ou un message s'
      - Afficher le nombre de point total.
   * Classer les joueurs du premier au dernier.
 
+
+- Enregistrer les scores, les noms de joueurs et la date dans un fichier texte au format CSV.
+
 * Aide :
 Tableau des points par lettre:
     $points = [ "A"	=> 1, "B"	=> 3, "C"	=> 3, "D"	=> 2, "E"	=> 1, "F"	=> 4, "G"	=> 2, "H"	=> 4,"I"	=> 1, "J"	=> 8, "K"	=> 10, "L"	=> 1, "M"	=> 2, "N"	=> 1, "O"	=> 1, "P"	=> 3, "Q"	=> 8, "R"	=> 1, "S"	=> 1, "T"	=> 1, "U"	=> 1, "V"	=> 4, "W"	=> 10, "X"	=> 10, "Y" =>	10];
 
+
+
+* Créer les interfaces
+
+- Datasource :
+    - dataSourceOpen();  // Ouvre une source de donnée
+    - dataSourceWrite(); // Ecrit une ligne dans la source de donnée
+    - dataSourceRead();  // Récupere les informations de la source de donnée
+    - dataSourceClose();
+    
+
 * Créer les classes
 
+- fileDataSource (permet de lire et ecrire dans un fichier)     
+    - cette classe implemente DataSource
 - joueur (information sur le joueur)
 - partie (information sur les parties)
 - scrabble (permet de verifier les mots)
- 
+
+
+
