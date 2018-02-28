@@ -42,11 +42,11 @@ ex :
 
 * Créer les classes
 
-- fileDataSource (permet de lire et ecrire dans un fichier)     
-    - cette classe implemente DataSource
-- joueur (information sur le joueur)
-- partie (information sur les parties)
-- scrabble (permet de verifier les mots et derouler le jeu)
+    - fileDataSource (permet de lire et ecrire dans un fichier)     
+        - cette classe implemente DataSource
+    - joueur (information sur le joueur)
+    - partie (information sur les parties)
+    - scrabble (permet de verifier les mots et derouler le jeu)
 
 
 * Tableau des points par lettre:
