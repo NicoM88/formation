@@ -48,35 +48,41 @@ include("libs/Training.php");
         </script        
     </head>
     <body>
-        <h1>Formation PHP 2018 - Nicolas BLAUDEZ</h1>
-        <p>Slides <a href="PHP/formation.odp">version ODP</a> - <a href="PHP/formation.pdf">version PDF</a></p>        
-        <?php
-            $training=new Training();
-            $sections = $training->getDirInfos("PHP");
-            foreach($sections as $section) {
-                if(is_dir("PHP/".$section)  && $section != "slides"  && $section != "mini-projets") {
-                    echo "<span class='section'><a href='?section=$section'>$section</a></span>";                    
-                }
-            }            
-            if(isset($_GET['section'])) {                
-                $section = $_GET['section'];
-                echo "<h4>$section</h4>";
-                echo "<div class='sectionContainer'>";
-                echo "<div id='panelCours' class='panelCours'>";
-                echo "<h5>cours</h5>";
-                include("PHP/".$section."/cours.html");
-                echo "</div>";
-                echo "<div class='panelExercice'>";
-                echo "<h5>exercices</h5>";
-                $exercices = $training->getDirInfos("PHP/".$section);                
-                foreach($exercices as $exercice) {
-                    if(is_dir("PHP/".$section."/".$exercice)) {
-                        echo "<span class='exercice'>$exercice :</span> <a href='#' onclick='AjaxPage(\"PHP/".$section."/".$exercice."/enonce.html\")'>enoncé</a> - <a target='_blank' href='PHP/".$section."/".$exercice."/exercice.php' onclick='AjaxPage(\"PHP/".$section."/".$exercice."/exercice.php\")'>resultat exercice</a> -  <a href='#' onclick='AjaxPage(\"PHP/".$section."/".$exercice."/solution.html\")'>solution</a><br />";                        
+        <span class="section"><a href="?categorie=ALGO">ALGORITHMIE</a></span>
+        <span class="section"><a href="?categorie=PHP">PHP</a></span>
+            <?php
+            if(isset($_GET['categorie'])) {
+                $cat=$_GET['categorie'];
+                $training=new Training();
+                $sections = $training->getDirInfos($cat);
+                echo '<h1>Formation '.$cat.' 2018 - Nicolas BLAUDEZ</h1>';
+                echo '<p>Slides <a href="'.$cat.'/formation.odp">version ODP</a> - <a href="$cat/formation.pdf">version PDF</a></p>';
+
+                foreach($sections as $section) {
+                    if(is_dir("$cat/".$section)  && $section != "slides"  && $section != "mini-projets") {
+                        echo "<span class='section'><a href='?section=$section'>$section</a></span>";                    
                     }
+                }            
+                if(isset($_GET['section'])) {                
+                    $section = $_GET['section'];
+                    echo "<h4>$section</h4>";
+                    echo "<div class='sectionContainer'>";
+                    echo "<div id='panelCours' class='panelCours'>";
+                    echo "<h5>cours</h5>";
+                    include("$cat/".$section."/cours.html");
+                    echo "</div>";
+                    echo "<div class='panelExercice'>";
+                    echo "<h5>exercices</h5>";
+                    $exercices = $training->getDirInfos("$cat/".$section);                
+                    foreach($exercices as $exercice) {
+                        if(is_dir("$cat/".$section."/".$exercice)) {
+                            echo "<span class='exercice'>$exercice :</span> <a href='#' onclick='AjaxPage(\"$cat/".$section."/".$exercice."/enonce.html\")'>enoncé</a> - <a target='_blank' href='$cat/".$section."/".$exercice."/exercice.php' onclick='AjaxPage(\"$cat/".$section."/".$exercice."/exercice.php\")'>resultat exercice</a> -  <a href='#' onclick='AjaxPage(\"PHP/".$section."/".$exercice."/solution.html\")'>solution</a><br />";                        
+                        }
+                    }
+                    echo "</div>";
+                    echo "</div>";
+                    
                 }
-                echo "</div>";
-                echo "</div>";
-                
             }
         ?>
     </body>
