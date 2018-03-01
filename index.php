@@ -22,8 +22,8 @@ include("libs/Training.php");
             h5 {font-size:18px;}
             p {margin:10px;}
             
-            .exercice {width:80px;display:inline-block;}
-            .section {border:1px solid black;border-radius:5px;padding:10px;width:100px;display:inline-block;margin:10px;}            
+            .exercice {width:90px;display:inline-block;}
+            .section {border:1px solid black;border-radius:5px;padding:10px;width:120px;display:inline-block;margin:10px;}            
             .sectionContainer {display:flex;flex-direction:row;}
             .panelCours {width:70%}
             .panelExercice {width:30%}
