@@ -79,45 +79,45 @@ class Sorcier extends Personnage {
         <?php }?>
         
         <?php 
-        if($_POST["action"]=="Suivant") {
+        if(isset($_POST['action']) && $_POST["action"]=="Suivant") {
             ?>
             <form action="exercice.php" method="post">
                 <?php
                 for($i=0;$i<$_POST["sorcier"];$i++) {
                     echo "<label>Nom de sorcier $i:</label>";
-                    echo "<input type="text" name="sorciers[$i]['nom']" />";
+                    echo "<input type='text' name='sorciers[$i][nom]' />";
                     echo "<br />";
                     echo "<label>Point de vie du sorcier $i:</label>";
-                    echo "<input type="text" name="sorciers[$i]['pointDeVie']" />";
+                    echo "<input type='text' name='sorciers[$i][pointDeVie]' />";
                     echo "<br />";
                 }
                 for($i=0;$i<$_POST["guerrier"];$i++) {
                     echo "<label>Nom de guerrier $i:</label>";
-                    echo "<input type="text" name="guerriers[$i]['nom']" />";
+                    echo "<input type='text' name='guerriers[$i][nom]' />";
                     echo "<br />";
                     echo "<label>Point de vie du guerrier $i:</label>";
-                    echo "<input type="text" name="guerriers[$i]['pointDeVie']" />";
+                    echo "<input type='text' name='guerriers[$i][pointDeVie]' />";
                     echo "<br />";
                 }
                 ?>
-                <input type="text"name="action" value="fight !" />                
+                <input type="submit"name="action" value="fight !" />                
             </form>
         <?php }?>
     
-<?
-if($_POST['action']=="fight") {
+<?php
+if(isset($_POST['action']) && $_POST['action']=="fight !") {
     // On créer un tableau de combattant vide
     $combattants = [];
 
     // On parcours $_POST['guerriers']
     // on instancie les guerriers avec les informations récoltés du formulaire
-    foreach($_POST['guerriers'] as $guerrier)
+    foreach($_POST['guerriers'] as $guerrier) {
         $combattants[] = new Guerrier($guerrier['nom'],$guerrier['pointDeVie']);
     }
 
     // On parcours $_POST['sorciers']
     // on instancie les sorciers avec les informations récoltés du formulaire
-    foreach($_POST['sorciers'] as $sorcier)
+    foreach($_POST['sorciers'] as $sorcier) {
         $combattants[] = new Sorcier($sorcier['nom'],$sorcier['pointDeVie']);
     }
 
