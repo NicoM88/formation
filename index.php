@@ -56,7 +56,7 @@ include("libs/Training.php");
                 $training=new Training();
                 $sections = $training->getDirInfos($cat);
                 echo '<h1>Formation '.$cat.' 2018 - Nicolas BLAUDEZ</h1>';
-                echo '<p>Slides <a href="'.$cat.'/formation.odp">version ODP</a> - <a href="$cat/formation.pdf">version PDF</a></p>';
+                echo '<p>Slides <a href="'.$cat.'/formation.odp">version ODP</a> - <a href="'.$cat.'/formation.pdf">version PDF</a></p>';
 
                 foreach($sections as $section) {
                     if(is_dir("$cat/".$section)  && $section != "slides"  && $section != "mini-projets") {
