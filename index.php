@@ -72,13 +72,12 @@ include("libs/Training.php");
                     include("$cat/".$section."/cours.html");
                     echo "</div>";
                     echo "<div class='panelExercice'>";
-                    $exercices = $training->getDirInfos("$cat/".$section);                
+                    $exercices = $training->getExercices("$cat/".$section); 
+                    
                     if(count($exercices)>0) {
                         echo "<h5>exercices</h5>";                    
                         foreach($exercices as $exercice) {
-                            if(is_dir("$cat/".$section."/".$exercice)) {
-                                echo "<span class='exercice'>$exercice :</span> <a href='#' onclick='AjaxPage(\"$cat/".$section."/".$exercice."/enonce.html\")'>enoncé</a> - <a target='_blank' href='$cat/".$section."/".$exercice."/exercice.php' onclick='AjaxPage(\"$cat/".$section."/".$exercice."/exercice.php\")'>resultat exercice</a> -  <a href='#' onclick='AjaxPage(\"PHP/".$section."/".$exercice."/solution.html\")'>solution</a><br />";                        
-                            }
+                            echo "<span class='exercice'>$exercice :</span> <a href='#' onclick='AjaxPage(\"$cat/".$section."/".$exercice."/enonce.html\")'>enoncé</a> - <a target='_blank' href='$cat/".$section."/".$exercice."/exercice.php' onclick='AjaxPage(\"$cat/".$section."/".$exercice."/exercice.php\")'>resultat exercice</a> -  <a href='#' onclick='AjaxPage(\"PHP/".$section."/".$exercice."/solution.html\")'>solution</a><br />";                                                    
                         }                    
                     }
                     echo "</div>";
