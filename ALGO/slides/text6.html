@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Diapo 7</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">Première page</a> <a href="text5.html">Précédent</a> <a href="text7.html">Suivant</a> <a href="text9.html">Dernière page</a> <a href="formation.html">Résumé</a> <a href="img6.html">Images</a></center><br>
+<h1>ALGO – Exemple 1 – Création d’un programme - Programme</h1>
+<table>
+  <tr>
+    <td>
+<p><b>&lt;?php</b></p>
+<p><b><font color="#009999">Récupérer les serveurs en base de donnée</b></font></p>
+<p><b>$dbh = new PDO('mysql:host=localhost;dbname=test', $user, $pass);</b></p>
+<p><b>$stmt = $dbh→query(‘SELECT * from serveurs se JOIN site si on se.id = si.serveur_id JOIN formule f ON si.formule_id = si.id’)&nbsp;;</b></p>
+<p><b>$serveurs = $stmt→fetchAll()&nbsp;;</b></p>
+<p><b>$listeServeurs = []&nbsp;;</b></p>
+<p><b><font color="#009999">Instancier les objets serveurs avec les infos de la base</b></font></p>
+<p><b>foreach($serveurs as $serveurInfos) {</b></p>
+<p><b>     $listServeurs[] = new Serveur($serveurInfos)&nbsp;;</b></p>
+<p><b>}</b></p>
+<p><b><font color="#009999">Parcourir le tableau ListeServeur</b></font></p>
+<p><b>foreach($listeServeurs as $serveur) {</b></p>
+<p><b>        <font color="#009999">Parcourir la liste des sites du serveur</b></font></p>
+<p><b>         foreach($serveur→listeSite() as $site) {</b></p>
+<p><b>              <font color="#009999">Si le quota du site est supérieur a celui de la formule</b></font></p>
+<p><b>              if($site→getFormule()→getQuota() &lt; $site→getTransfert()) {</b></p>
+<ul>
+<li><b>               <font color="#009999">Afficher un message indiquant que le quota est dépassé pour ce site</b></font></li>
+<p><b>                    echo ‘Le site ’.$site→getDomain()&nbsp;.’ à depassé son quota de transfert’&nbsp;;</b></p>
+<p><b>              }</b></p>
+<p><b>         }  </b></p>
+<p><b>}</b></p>
+<p><b> </b></p>
+</ul>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

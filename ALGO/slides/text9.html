@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Diapo 10</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">Première page</a> <a href="text8.html">Précédent</a> Suivant Dernière page <a href="formation.html">Résumé</a> <a href="img9.html">Images</a></center><br>
+<h1>ALGO – Exemple 2 – Création d’un programme - Programme</h1>
+<table>
+  <tr>
+    <td>
+<p><b>&lt;?php</b></p>
+<p><b><font color="#009999">Récupérer les données de la course grâce au formulaire</b></font></p>
+<p><b>$infosCourse = $_POST&nbsp;;</b></p>
+<p><b><font color="#009999">Récupérer les informations du client dans la base de donnée</b></font></p>
+<p><b>$dbh = new PDO('mysql:host=localhost;dbname=test', $user, $pass);</b></p>
+<p><b>$stmt = $dbh→query(‘SELECT * from clients c WHERE c.id=’.$infosCourse[‘clientId’])&nbsp;;</b></p>
+<p><b>$clientInfos = $stmt→fetch()&nbsp;;</b></p>
+<p><b><font color="#009999">Instancier un objet client</b></font></p>
+<p><b>$client = new Client($clientInfos)&nbsp;;</b></p>
+<p><b><font color="#009999">Recupérer les taxis dans la base de donnée</b></font></p>
+<p><b>$stmt = $dbh→query(‘SELECT * from taxi’)&nbsp;;</b></p>
+<p><b>$taxis = $stmt→fetchAll()&nbsp;;</b></p>
+<p><b><font color="#009999">Parcourir les taxis </b></font></p>
+<p><b>foreach($taxis as $taxi) {</b></p>
+<p>      <b><font color="#009999">Choisir le premier taxi libre</b></font></p>
+<p><b>      if($taxi→getEnCourse() == false) {</b></p>
+<p><b>           $selectedTaxi = $taxi&nbsp;;</b></p>
+<p><b>      }</b></p>
+<p>}</p>
+<p><b><font color="#009999">Changer la variable enCourse du taxi</b></font></p>
+<p><b>$selectedTaxi→setEnCourse(true)&nbsp;;</b></p>
+<p><b><font color="#009999">Créer une commande</b></font></p>
+<p><b>$commande = new Commande($infosCourse, $selectedTaxi, $client)</b></p>
+<p><b><font color="#009999"></b></font></p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
