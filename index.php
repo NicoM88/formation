@@ -60,7 +60,7 @@ include("libs/Training.php");
 
                 foreach($sections as $section) {
                     if(is_dir("$cat/".$section)  && $section != "slides"  && $section != "mini-projets") {
-                        echo "<span class='section'><a href='?section=$section'>$section</a></span>";                    
+                        echo "<span class='section'><a href='?categorie=$cat&section=$section'>$section</a></span>";                    
                     }
                 }            
                 if(isset($_GET['section'])) {                
